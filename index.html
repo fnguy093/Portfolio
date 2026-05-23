@@ -37,7 +37,7 @@
         <div class="outside-description">
             <div id="descriptionSection"class="description">
                 <h1>About Me</h1>
-                <h2>I am a software engineering student at the University of Ottawa, focused on developing high-quality software through disciplined coding and analytical thinking. I take pride in my ability to adapt to new challenges, whether through collaborative group development or focused solo projects. My goal is to leverage my technical skills and strong communication to solve meaningful, real-world problems with elegant code. </h2>
+                <h2>I am a Software Engineering student at the University of Ottawa with a focus on disciplined coding and analytical thinking. I liked to collaborate in teams, face new challenges, and build code that solves meaningful real-world problems. From researching and brainstorming concepts to designing in Figma, I enjoy seeing a project come to life through good development. </h2>
             </div>
         </div>
         <div class="outside-how-i-work">
@@ -103,34 +103,30 @@
         </div>
         </div>
         <script>
-// 1. Grab all the navigation buttons
-    const nameBtn = document.getElementById('nameBtn');
-    const aboutBtn = document.getElementById('aboutBtn');
-    const howBtn = document.getElementById('howBtn');
-    const projectsBtn = document.getElementById('projectsBtn');
+            const nameBtn = document.getElementById('nameBtn');
+            const aboutBtn = document.getElementById('aboutBtn');
+            const howBtn = document.getElementById('howBtn');
+            const projectsBtn = document.getElementById('projectsBtn');
 
-    // 2. Grab all the target sections
-    const introSection = document.getElementById('introSection');
-    const aboutSection = document.getElementById('descriptionSection');
-    const howSection = document.getElementById('howIWorkSection');
-    const projectsSection = document.getElementById('projectsSection');
+            const introSection = document.getElementById('introSection');
+            const aboutSection = document.getElementById('descriptionSection');
+            const howSection = document.getElementById('howIWorkSection');
+            const projectsSection = document.getElementById('projectsSection');
 
-    // 3. Helper function to apply the smooth scroll
-    function scrollToSection(target) {
-        if (target) {
-            target.scrollIntoView({ 
-                behavior: 'smooth', 
-                block: 'start',
-                block: 'center'
-            });
-        }
-    }
+            function scrollToSection(target) {
+                if (target) {
+                    target.scrollIntoView({ 
+                        behavior: 'smooth', 
+                        block: 'start',
+                        block: 'center'
+                    });
+                }
+            }
 
-    // 4. Attach event listeners to each button
-    nameBtn.addEventListener('click', () => scrollToSection(introSection));
-    aboutBtn.addEventListener('click', () => scrollToSection(aboutSection));
-    howBtn.addEventListener('click', () => scrollToSection(howSection));
-    projectsBtn.addEventListener('click', () => scrollToSection(projectsSection));
+            nameBtn.addEventListener('click', () => scrollToSection(introSection));
+            aboutBtn.addEventListener('click', () => scrollToSection(aboutSection));
+            howBtn.addEventListener('click', () => scrollToSection(howSection));
+            projectsBtn.addEventListener('click', () => scrollToSection(projectsSection));
         </script>
     </body>
 </html>
