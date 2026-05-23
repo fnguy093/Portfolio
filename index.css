@@ -1,0 +1,371 @@
+html {
+    scroll-behavior: smooth; 
+    scroll-padding-top: 80px; 
+}
+
+body {
+    margin: 0;
+    font-family:"Lato", sans-serif;
+    background-color:#F7F0F0
+}
+
+.outside-tabs{
+    border-bottom: 0.5px solid #6a6a6a;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    background-color:#F7F0F0;
+
+}
+.tabs{
+    gap: 40px;
+    display: flex;
+    justify-content: space-between;
+    padding: 25px;
+    max-width: 1000px; 
+    margin: 0 auto;
+    
+
+}
+
+
+.rightTabs{
+    display: flex;
+    gap: 40px;
+    margin:0;
+
+
+
+}
+
+.about-me-button, .projects-button, .how-i-work-button, .name-button{
+    border: none;      
+    outline: none;     
+    background: none;  
+    font-size: 13px;
+    cursor:pointer;
+    position:relative;
+    padding-bottom: 8px;
+    margin-left: 0; 
+    font-weight: bold;
+    color: #6a6a6a;
+
+
+}
+
+
+.about-me-button:hover, .projects-button:hover, .how-i-work-button:hover, .name-button:hover{
+    color:#C57373;
+}
+.about-me-button:hover:after, .projects-button:hover:after, .how-i-work-button:hover:after, .name-button:hover:after{
+    width: 100%;
+}
+
+.about-me-button::after, .projects-button::after, .how-i-work-button::after, .name-button::after{
+    content:'';
+    position: absolute;
+    height:1px;
+    left:50%;
+    bottom:0;
+    width:0;
+    background:#C57373;
+    transform: translateX(-50%);
+    transition:width .4s,transform 0.2s ease;
+
+}
+
+/* INTRODUCTION */
+.outside-description, .outside-how-i-work{
+
+    min-height: 80vh;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+}
+.outside-introduction{
+    min-height: 80vh;
+    display: flex;
+    align-items: center;
+}
+.introduction{
+    max-width: 1000px;
+    margin: 0 auto;
+    width: 100%; 
+    display: flex;           
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start; 
+}
+
+.introduction h1{
+    font-size:90px;
+    margin-bottom: 0;
+    font-weight:900;
+    color:#C57373;
+    display: inline-block;
+    white-space: nowrap;
+    overflow: hidden;
+    width: 0; 
+    border-right: 4px solid transparent; 
+    max-width: fit-content;
+    animation: 
+    show-cursor 0.1s forwards,
+    typing 2s steps(40, end) forwards, 
+    blink-caret .75s step-end infinite,
+    hide-cursor 0s forwards 2s
+}
+
+.introduction h2{
+    font-size:55px;
+    font-weight: 300;
+    margin-top:0;
+    color:#696969;
+    max-width: fit-content;
+
+    display: inline-block;
+    white-space: nowrap;
+    overflow: hidden;
+    width: 0; 
+    border-right: 4px solid transparent;
+
+    animation: 
+      show-cursor 0s forwards 3.5s,
+      typing 3.5s steps(40, end) forwards,
+      blink-caret .75s step-end infinite;
+    animation-delay: 2s; 
+}
+
+@keyframes show-cursor {
+    to { border-right-color: #696969; }
+}
+@keyframes hide-cursor {
+    to { border-right-color: transparent; }
+}
+@keyframes typing {
+    from { width: 0 }
+    to { width: 100% }
+  }
+  
+  @keyframes blink-caret {
+    from, to { border-color: transparent }
+    50% { border-color: #696969; }
+  }
+
+/* ABOUT ME */
+
+.outside-description{
+    display:flex;
+    justify-content:center;
+    padding:10px;
+    align-items: center;
+}
+.description{
+    background-color:#ffffff;
+    padding:80px;
+    border-radius:25px;
+    max-width: 1000px;
+    display:flex;
+    justify-content:center;
+    flex-direction:column;
+
+
+    border-color:#C57373;
+    border-style:solid;
+    border-width:0.5px;
+}
+
+.description h1{
+    font-size: 78px;
+    margin-bottom:0;
+    color:#C57373;
+    font-weight:700;
+    margin-top: 0;        
+}
+
+.description h2{
+    margin-top:5px;
+    color:#696969;
+    font-weight:300;
+
+}
+
+
+
+
+/* HOW I WORK */
+
+.how-i-work{
+    max-width: 1250px;
+    margin: 0 auto;
+    padding: 40px;
+    width: 100%;
+
+}
+.process{
+    display:grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 2fr));    gap: 20px;
+    gap:40px;
+}
+
+.bi-pencil-fill, .bi-vector-pen, .bi-laptop  {
+    color: #C57373; 
+    font-size: 40px;
+}
+
+
+.how-i-work h1{
+    color:#C57373;
+    margin-bottom: 70px;
+    font-size: 22px;
+    font-weight:900;
+}
+
+.research-brainstorm h1, .design-prototype h1, .build-refine h1{
+    font-size: 20px;
+    margin-bottom:0;
+
+}
+
+.research-brainstorm h2, .design-prototype h2, .build-refine h2{
+    font-size: 20px;
+    font-weight:300;
+    color:#6a6a6a;
+    text-align: center;
+
+}
+.research-brainstorm, .design-prototype, .build-refine{
+  
+    flex: 1;
+    height: 300px;         
+    display: flex;         
+    align-items: center;   
+    padding: 20px 45px;         
+    gap: 10px;
+    flex-direction:column;
+    justify-content: center;
+
+
+    border-style: solid;
+    border-color: #C57373;
+    border-width: 0.1px;
+    background-color:white;
+    border-radius:15px;  
+
+    position: relative;
+    transition: all 0.2s ease 0s;
+    transform: translateY(0px) translateX(0px);
+    cursor: pointer;
+
+
+}
+.research-brainstorm:hover, .design-prototype:hover, .build-refine:hover{
+    transform: translateY(-8px) translateX(-8px); 
+    box-shadow: 15px 15px 0px #C57373;
+}
+.research-brainstorm::before, .design-prototype::before, .build-refine::before {
+    position: absolute;
+    top: -2px; 
+    left: -2px;
+    width: 0; 
+    height: 2px;
+
+}
+
+/* CASE STUDIES */
+.outside-case-studies {
+
+    min-height: 80vh;
+
+
+}
+.caseStudies{
+
+    max-width: 1250px;
+    margin: 0 auto;
+    padding: 40px;
+
+}
+
+.caseStudies h1{
+    color:#C57373;
+    margin-bottom: 50px;
+    font-size: 22px;
+    font-weight:900;
+}
+
+
+.projects-grid{
+    display:grid;
+    grid-template-columns: repeat(auto-fit, minmax(450px, 1fr));    gap: 20px;
+    gap:40px;
+}
+
+.service{
+    display:flex;
+}
+
+.service-info h1, .game-info h1, .e-commerce-info h1, .analytics-info h1{
+    font-size: 24px;       
+    text-align: left;
+    margin: 0;
+    color: #C57373;
+    font-weight: bold;
+}
+
+.service-info h2, .game-info h2, .e-commerce-info h2, .analytics-info h2{
+    font-size: 18px;       
+    text-align: left;
+    margin-top: 10px;
+    color: #6a6a6a;
+    font-weight: 300;
+}
+
+.hairdresser-service, .memory-game-img, .e-commerce-img, .analytics-img{
+    height: 100%;          
+    width: 230px;          
+    object-fit: cover;     
+    border-radius: 15px;
+}
+
+
+.service, .memoryGame, .e-commerce, .analytics{
+    flex: 1;
+    height: 160px;         
+    display: flex;         
+    align-items: center;   
+    padding: 20px;         
+    gap: 30px;
+
+    border-style: solid;
+    border-color: #C57373;
+    border-width: 0.1px;
+    background-color:white;
+    border-radius:15px;
+
+    position: relative;
+    transition: all 0.2s ease 0s;
+    transform: translateY(0px) translateX(0px);
+    cursor: pointer;
+
+
+}
+
+
+
+.service:hover, .memoryGame:hover, .e-commerce:hover, .analytics:hover{
+    transform: translateY(-8px) translateX(-8px); 
+    box-shadow: 15px 15px 0px #C57373;
+}
+
+.service::before, .memoryGame::before, .e-commerce::before, .analytics::before {
+    position: absolute;
+    top: -2px; 
+    left: -2px;
+    width: 0; 
+    height: 2px;
+
+}
+  
+  
+
+  

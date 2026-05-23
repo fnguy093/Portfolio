@@ -1,1 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <link rel="stylesheet" href="index.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css">
 
+    </head>
+    <body>
+        <div class="outside-tabs">
+            <div class="tabs">
+                <button id=nameBtn class="name-button" type="button">
+                    FELICIA NGUYEN
+                </button>
+
+                <div class="rightTabs">
+                    <button id="aboutBtn" class="about-me-button" type="button">
+                        ABOUT ME
+                    </button>
+                    <button id="howBtn" class="how-i-work-button" type="button">
+                        HOW I WORK
+                    </button>
+                    <button id="projectsBtn" class="projects-button" type="button">
+                        PROJECTS
+                    </button>
+                </div>
+            </div>
+        </div>
+        <div class="outside-introduction">
+            <div id="introSection" class="introduction">
+                <h1>Hi, I'm Felicia</h1>
+                <h2>and I'm a Software Engineering Student.</h2>
+            </div>
+        </div>
+        <div class="outside-description">
+            <div id="descriptionSection"class="description">
+                <h1>About Me</h1>
+                <h2>I am a software engineering student at the University of Ottawa, focused on developing high-quality software through disciplined coding and analytical thinking. I take pride in my ability to adapt to new challenges, whether through collaborative group development or focused solo projects. My goal is to leverage my technical skills and strong communication to solve meaningful, real-world problems with elegant code. </h2>
+            </div>
+        </div>
+        <div class="outside-how-i-work">
+            <div id="howIWorkSection" class="how-i-work">
+                <h1>HOW I WORK</h1>
+                <div class="process">
+                    <div class="research-brainstorm">
+                        <i class="bi bi-pencil-fill"></i>
+                        <h1>1. Research & Brainstorm</h1>
+                        <h2>I do this to gain ideas and plot out specific ideas that I would like to try out.</h2>
+                    </div>
+                    <div class="design-prototype">
+                        <i class="bi bi-vector-pen"></i>
+                        <h1>2. Design & Prototype</h1>
+
+                        <h2>I use figma to create prototypes of ideas that I had previously brainstormed</h2>
+                    </div>
+                    <div class="build-refine">
+                        <i class="bi bi-laptop"></i>
+                        <h1>3. Build & Refine</h1>
+                        <h2>After choosing the ideal prototype, I start to build the project and refine certain aspects when needed</h2>
+
+
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="outside-case-studies">
+        <div id="projectsSection" class="caseStudies">
+            <h1>PROJECTS</h1>
+            <div class="projects-grid">
+                <div class="service">
+                    <img src="hairdresser-service.img" class="hairdresser-service">
+                    <div class="service-info">
+                        <h1>Service Website</h1>
+                        <h2>This website was developped for a hair salon using React-Boostrap</h2>
+                    </div>
+                </div>
+                <div class="memoryGame">
+                    <img src="memory-game.img" class="memory-game-img">
+                    <div class="game-info">
+                        <h1>Game Website</h1>
+                        <h2>This game was developped using HTML, CSS and JavaScript</h2>
+                    </div>
+                </div>
+                <div class="e-commerce">
+                    <img src="e-commerce.img" class="e-commerce-img">
+                    <div class="e-commerce-info">
+                        <h1>E-Commerce Website</h1>
+                        <h2>This website was developped using React.js</h2>
+                    </div>
+                </div>
+                <div class="analytics">
+                    <img src="analytics.img" class="analytics-img">
+                    <div class="analytics-info">
+                        <h1>Analytics Website</h1>
+                        <h2>This dashboard was developped using React.js</h2>
+                    </div>
+                </div>
+            </div>
+        </div>
+        </div>
+        <script>
+// 1. Grab all the navigation buttons
+    const nameBtn = document.getElementById('nameBtn');
+    const aboutBtn = document.getElementById('aboutBtn');
+    const howBtn = document.getElementById('howBtn');
+    const projectsBtn = document.getElementById('projectsBtn');
+
+    // 2. Grab all the target sections
+    const introSection = document.getElementById('introSection');
+    const aboutSection = document.getElementById('descriptionSection');
+    const howSection = document.getElementById('howIWorkSection');
+    const projectsSection = document.getElementById('projectsSection');
+
+    // 3. Helper function to apply the smooth scroll
+    function scrollToSection(target) {
+        if (target) {
+            target.scrollIntoView({ 
+                behavior: 'smooth', 
+                block: 'start',
+                block: 'center'
+            });
+        }
+    }
+
+    // 4. Attach event listeners to each button
+    nameBtn.addEventListener('click', () => scrollToSection(introSection));
+    aboutBtn.addEventListener('click', () => scrollToSection(aboutSection));
+    howBtn.addEventListener('click', () => scrollToSection(howSection));
+    projectsBtn.addEventListener('click', () => scrollToSection(projectsSection));
+        </script>
+    </body>
+</html>
