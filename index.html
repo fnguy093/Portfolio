@@ -71,7 +71,7 @@
         <div id="projectsSection" class="caseStudies">
             <h1>PROJECTS</h1>
             <div class="projects-grid">
-                <div class="service">
+                <div class="service" id="serviceProject">
                     <img src="hairdresser-service.img" class="hairdresser-service">
                     <div class="service-info">
                         <h1>Service Website</h1>
@@ -127,6 +127,12 @@
             aboutBtn.addEventListener('click', () => scrollToSection(aboutSection));
             howBtn.addEventListener('click', () => scrollToSection(howSection));
             projectsBtn.addEventListener('click', () => scrollToSection(projectsSection));
+
+            const serviceProject = document.getElementById('serviceProject');
+
+            serviceProject.addEventListener('click', () => {
+                window.location.href = 'https://super-hummingbird-424814.netlify.app/';
+            });
         </script>
     </body>
 </html>
