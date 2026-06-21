@@ -78,7 +78,7 @@
                         <h2>This website was developped for a hair salon using React-Boostrap</h2>
                     </div>
                 </div>
-                <div class="memoryGame">
+                <div class="memoryGame" id="gameWebsite">
                     <img src="memory-game.img" class="memory-game-img">
                     <div class="game-info">
                         <h1>Game Website</h1>
@@ -132,6 +132,11 @@
 
             serviceProject.addEventListener('click', () => {
                 window.location.href = 'https://super-hummingbird-424814.netlify.app/';
+            });
+            const gameProject = document.getElementById('gameWebsite');
+
+            gameProject.addEventListener('click', () => {
+                window.location.href = 'https://rococo-pika-4b3e54.netlify.app/';
             });
         </script>
     </body>
