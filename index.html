@@ -85,7 +85,7 @@
                         <h2>This game was developped using HTML, CSS and JavaScript</h2>
                     </div>
                 </div>
-                <div class="e-commerce">
+                <div class="e-commerce" id="eCommerceWebsite">
                     <img src="e-commerce.img" class="e-commerce-img">
                     <div class="e-commerce-info">
                         <h1>E-Commerce Website</h1>
@@ -137,6 +137,11 @@
 
             gameProject.addEventListener('click', () => {
                 window.location.href = 'https://rococo-pika-4b3e54.netlify.app/';
+            });
+            const eCommerceProject = document.getElementById('eCommerceWebsite');
+
+            eCommerceProject.addEventListener('click', () => {
+                window.location.href = 'https://sensational-rabanadas-9cad1c.netlify.app/';
             });
         </script>
     </body>
