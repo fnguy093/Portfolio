@@ -72,30 +72,30 @@
             <h1>PROJECTS</h1>
             <div class="projects-grid">
                 <div class="service" id="serviceProject">
-                    <img src="hairdresser-service.img" class="hairdresser-service">
+                    <img src="service.png" class="hairdresser-service">
                     <div class="service-info">
-                        <h1>Service Website</h1>
+                        <h1>Hairdresser Service - Maison de Beaute</h1>
                         <h2>This website was developped for a hair salon using React-Boostrap</h2>
                     </div>
                 </div>
                 <div class="memoryGame" id="gameWebsite">
-                    <img src="memory-game.img" class="memory-game-img">
+                    <img src="game.png" class="memory-game-img">
                     <div class="game-info">
-                        <h1>Game Website</h1>
+                        <h1>Memory Game - CopyCat</h1>
                         <h2>This game was developped using HTML, CSS and JavaScript</h2>
                     </div>
                 </div>
                 <div class="e-commerce" id="eCommerceWebsite">
-                    <img src="e-commerce.img" class="e-commerce-img">
+                    <img src="e-commerce.png" class="e-commerce-img">
                     <div class="e-commerce-info">
-                        <h1>E-Commerce Website</h1>
+                        <h1>Home Decor Website - Bloom</h1>
                         <h2>This website was developped using React.js</h2>
                     </div>
                 </div>
-                <div class="analytics">
-                    <img src="analytics.img" class="analytics-img">
+                <div class="analytics" id="analyticsWebsite">
+                    <img src="dashboard.png" class="analytics-img">
                     <div class="analytics-info">
-                        <h1>Analytics Website</h1>
+                        <h1>Dashboard</h1>
                         <h2>This dashboard was developped using React.js</h2>
                     </div>
                 </div>
@@ -143,6 +143,12 @@
             eCommerceProject.addEventListener('click', () => {
                 window.location.href = 'https://sensational-rabanadas-9cad1c.netlify.app/';
             });
+
+            const dashboardProject = document.getElementById('analyticsWebsite');
+
+            dashboardProject.addEventListener('click', () => {
+                window.location.href = 'https://cozy-phoenix-6363a9.netlify.app/';
+            }); 
         </script>
     </body>
 </html>
